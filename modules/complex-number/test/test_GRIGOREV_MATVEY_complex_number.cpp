@@ -173,5 +173,5 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_not_eq) {
     ComplexNumber b(re2, im2);
 
     // Assert
-    EXPECT_TRUE(a != b);    
+    EXPECT_TRUE(a != b);
 }
