@@ -13,8 +13,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Init_Constructor) {
     ComplexNumber z(re, im);
 
     // Assert
-    EXPECT_EQ(re, z.getRe());
-    EXPECT_EQ(im, z.getIm());
+    ASSERT_EQ(re, z.getRe());
+    ASSERT_EQ(im, z.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Copy_Constructor_1) {
@@ -27,8 +27,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Copy_Constructor_1) {
     ComplexNumber x(z);
 
     // Assert
-    EXPECT_EQ(re, x.getRe());
-    EXPECT_EQ(im, x.getIm());
+    ASSERT_EQ(re, x.getRe());
+    ASSERT_EQ(im, x.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Copy_Constructor_2) {
@@ -41,8 +41,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Copy_Constructor_2) {
     ComplexNumber x = z;
 
     // Assert
-    EXPECT_EQ(re, x.getRe());
-    EXPECT_EQ(im, x.getIm());
+    ASSERT_EQ(re, x.getRe());
+    ASSERT_EQ(im, x.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, GetRe) {
@@ -54,7 +54,7 @@ TEST(Grigorev_Matvey_ComplexNumberTest, GetRe) {
     ComplexNumber z(re, im);
 
     // Assert
-    EXPECT_EQ(re, z.getRe());
+    ASSERT_EQ(re, z.getRe());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, GetIm) {
@@ -66,7 +66,7 @@ TEST(Grigorev_Matvey_ComplexNumberTest, GetIm) {
     ComplexNumber z(re, im);
 
     // Assert
-    EXPECT_EQ(im, z.getIm());
+    ASSERT_EQ(im, z.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, SetRe) {
@@ -80,7 +80,7 @@ TEST(Grigorev_Matvey_ComplexNumberTest, SetRe) {
     z.setRe(testRe);
 
     // Assert
-    EXPECT_EQ(testRe, z.getRe());
+    ASSERT_EQ(testRe, z.getRe());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, SetIm) {
@@ -94,7 +94,7 @@ TEST(Grigorev_Matvey_ComplexNumberTest, SetIm) {
     z.setIm(testIm);
 
     // Assert
-    EXPECT_EQ(testIm, z.getIm());
+    ASSERT_EQ(testIm, z.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Operator_plus) {
@@ -110,8 +110,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_plus) {
     ComplexNumber c = a + b;
 
     // Assert
-    EXPECT_EQ(re1 + re2, c.getRe());
-    EXPECT_EQ(im1 + im2, c.getIm());
+    ASSERT_EQ(re1 + re2, c.getRe());
+    ASSERT_EQ(im1 + im2, c.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Operator_minus) {
@@ -127,8 +127,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_minus) {
     ComplexNumber c = a - b;
 
     // Assert
-    EXPECT_EQ(re1 - re2, c.getRe());
-    EXPECT_EQ(im1 - im2, c.getIm());
+    ASSERT_EQ(re1 - re2, c.getRe());
+    ASSERT_EQ(im1 - im2, c.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Operator_multpl) {
@@ -144,8 +144,8 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_multpl) {
     ComplexNumber c = a * b;
 
     // Assert
-    EXPECT_EQ(re1 * re2 - im1 * im2, c.getRe());
-    EXPECT_EQ(re1 * im2 + re2 * im1, c.getIm());
+    ASSERT_EQ(re1 * re2 - im1 * im2, c.getRe());
+    ASSERT_EQ(re1 * im2 + re2 * im1, c.getIm());
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Operator_eq) {
@@ -158,7 +158,7 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_eq) {
     ComplexNumber b(re1, im1);
 
     // Assert
-    EXPECT_TRUE(a == b);
+    ASSERT_TRUE(a == b);
 }
 
 TEST(Grigorev_Matvey_ComplexNumberTest, Operator_not_eq) {
@@ -173,5 +173,5 @@ TEST(Grigorev_Matvey_ComplexNumberTest, Operator_not_eq) {
     ComplexNumber b(re2, im2);
 
     // Assert
-    EXPECT_TRUE(a != b);
+    ASSERT_TRUE(a != b);
 }
