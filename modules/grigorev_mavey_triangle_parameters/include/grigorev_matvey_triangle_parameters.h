@@ -7,12 +7,12 @@
 #include <vector>
 
 class Triangle {
-private:
+ private:
     std::pair<double, double> A;
     std::pair<double, double> B;
     std::pair<double, double> C;
 
-public:
+ public:
     Triangle();
     Triangle(std::pair<double, double> _A, std::pair<double, double> _B,
         std::pair<double, double> _C);
