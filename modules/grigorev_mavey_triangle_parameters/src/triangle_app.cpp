@@ -13,10 +13,10 @@ std::string application::operator()(int argc, char** argv) {
   if (argc == 1) {
     return help(argv[0]);
   }
-  if (argc < 4) {
+  if (argc < 5) {
     return "Error: too few arguments";
   }
-  if (argc > 4) {
+  if (argc > 6) {
     return "Error: too many arguments";
   }
   arguments args;
@@ -40,22 +40,23 @@ std::string application::help(const std::string& appname) {
          "square\n3. "
          "cosA\n4. "
          "cosB\n5. "
-         "cosC\n";
+         "cosC";
 }
 
 bool application::validate(const std::string& str) { return true; }
 
 application::arguments application::parse_args(int argc, char** argv) {
   arguments args;
-  for (int i = 1; i <= 2; i++) {
+  for (int i = 1; i <= 3; i++) {
     std::string dot = argv[i];
     auto delimeter = dot.find(",");
     float f = std::stof(dot.substr(0, delimeter));
     float s = std::stof(dot.substr(delimeter + 1));
     if (i == 1) args.a = {f, s};
     if (i == 2) args.b = {f, s};
+    if (i == 3) args.c = { f, s };
   }
-  args.operation = argv[3];
-  if (argc > 4) args.side = std::stoi(argv[4]);
+  args.operation = argv[4];
+  if (argc > 5) args.side = std::stoi(argv[5]);
   return args;
 }
