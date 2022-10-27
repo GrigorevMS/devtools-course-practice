@@ -20,6 +20,7 @@ std::string PointInTriangleApplication::getHelp(const std::string& appname) {
 std::string PointInTriangleApplication::
 operator()(int argc, const char** argv) {
     bool result;
+    bool exist;
     if (argc == 1)
         return getHelp(argv[0]);
 
@@ -37,15 +38,23 @@ operator()(int argc, const char** argv) {
         Point c(parseArgument(argv[5]), parseArgument(argv[6]));
         Point x(parseArgument(argv[7]), parseArgument(argv[8]));
         Triangle tr(a, b, c);
-        result = tr.IsPointInTriangle(tr, x);
+        exist = tr.exist;
+        if (exist)
+            result = tr.IsPointInTriangle(tr, x);
+        else
+            result = false;
     }
     catch (std::exception& exp) {
         return exp.what();
     }
-    if (result)
-        return "True";
-    else
-        return "False";
+    if (exist) {
+        if (result)
+            return "True";
+        else
+            return "False";
+    } else {
+        return "Triangle does not exist";
+    }
 }
 
 int PointInTriangleApplication::parseArgument(const char* arg) {

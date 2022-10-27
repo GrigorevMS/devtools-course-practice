@@ -25,6 +25,7 @@ class Triangle {
   double ab = 0, bc = 0, ac = 0;
 
  public:
+  bool exist;
   Triangle();
   Triangle(Point _a, Point _b, Point _c);
   double SideLength(Point _a, Point _b);

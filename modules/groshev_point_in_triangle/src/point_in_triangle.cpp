@@ -13,6 +13,7 @@ Triangle::Triangle() : a(-3.0, 0.0), b(3.0, 0.0), c(0.0, 3.0) {
   ab = SideLength(a, b);
   bc = SideLength(b, c);
   ac = SideLength(a, c);
+  exist = true;
 }
 
 Triangle::Triangle(Point _a, Point _b, Point _c) : a(_a), b(_b), c(_c) {
@@ -20,9 +21,7 @@ Triangle::Triangle(Point _a, Point _b, Point _c) : a(_a), b(_b), c(_c) {
   bc = SideLength(b, c);
   ac = SideLength(a, c);
 
-  if (!IsTriangleExist()) {
-    throw std::string("Triangle does not exist");
-  }
+  exist = IsTriangleExist();
 }
 
 
