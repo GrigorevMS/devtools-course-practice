@@ -45,8 +45,20 @@ set_tests_properties(${prefix}_can_find_square PROPERTIES
     PASS_REGULAR_EXPRESSION "4"
     LABELS "${MODULE}")
 
-add_test(NAME ${prefix}_can_find_height
-    COMMAND ${APPLICATION} 1,3 5,10 9,9 height 1)
+add_test(NAME ${prefix}_can_find_cos_a
+    COMMAND ${APPLICATION} 1, 3, 5, 8, 6, 6, cosA)
 set_tests_properties(${prefix}_can_find_height PROPERTIES
-    PASS_REGULAR_EXPRESSION "32"
+    PASS_REGULAR_EXPRESSION "0.937425"
+    LABELS "${MODULE}")
+
+add_test(NAME ${prefix}_can_find_cos_b
+    COMMAND ${APPLICATION} 1, 3, 5, 8, 6, 6, cosB)
+set_tests_properties(${prefix}_can_find_height PROPERTIES
+    PASS_REGULAR_EXPRESSION "0.419058"
+    LABELS "${MODULE}")
+
+add_test(NAME ${prefix}_can_find_cos_c
+    COMMAND ${APPLICATION} 1, 3, 5, 8, 6, 6, cosC)
+set_tests_properties(${prefix}_can_find_height PROPERTIES
+    PASS_REGULAR_EXPRESSION "-0.0766965"
     LABELS "${MODULE}")
