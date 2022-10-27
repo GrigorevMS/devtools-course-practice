@@ -60,5 +60,5 @@ set_tests_properties(${prefix}_can_find_cos_b PROPERTIES
 add_test(NAME ${prefix}_can_find_cos_c
     COMMAND ${APPLICATION} 1,3 5,8 6,6 cosC)
 set_tests_properties(${prefix}_can_find_cos_c PROPERTIES
-    PASS_REGULAR_EXPRESSION "-0.0766965"
+    PASS_REGULAR_EXPRESSION "-0.076697"
     LABELS "${MODULE}")
