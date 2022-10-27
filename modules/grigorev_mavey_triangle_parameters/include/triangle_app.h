@@ -27,5 +27,4 @@ class application {
   arguments parse_args(int argc, char** argv);
 };
 
-#endif  MODULES_GRIGOREV_MAVEY_TRIANGLE_PARAMETERS_INCLUDE_TRIANGLE_APP_H_
-
+#endif  // MODULES_GRIGOREV_MAVEY_TRIANGLE_PARAMETERS_INCLUDE_TRIANGLE_APP_H_
