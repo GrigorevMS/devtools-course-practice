@@ -7,10 +7,6 @@
 
 TEST(Grigorev_triangle_parameters, Default_constructor) {
     // Arrange
-    std::pair<double, double> A = { 0, 0 };
-    std::pair<double, double> B = { 2, 0 };
-    std::pair<double, double> C = { 0, 2 };
-
     std::pair<double, double> e = { 0, 0 };
 
     // Act
